@@ -15,8 +15,8 @@ services:
       - pgdata:/var/lib/postgresql/data
     networks:
       - node-data
-  volumes:
-    pgdata:
-  networks:
-    node-data:
-      driver: bridge
+volumes:
+  pgdata:
+networks:
+  node-data:
+    driver: bridge
