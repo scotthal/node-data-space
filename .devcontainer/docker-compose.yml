@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - node-data
+  postgres:
+    image: postgres:latest
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - node-data
+  volumes:
+    pgdata:
+  networks:
+    node-data:
+      driver: bridge

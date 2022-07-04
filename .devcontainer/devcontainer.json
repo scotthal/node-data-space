@@ -1,7 +1,6 @@
 {
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "node",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -9,6 +8,7 @@
         "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
         "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml",
         "visualstudioexptteam.vscodeintellicode"
       ]
     }
