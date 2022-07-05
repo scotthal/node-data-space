@@ -14,17 +14,10 @@ services:
       - node-data
   postgres:
     image: postgres:latest
-    environment:
-      - POSTGRES_PASSWORD_FILE=/run/secrets/pgpasswd
-    secrets:
-      - pgpasswd
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
       - node-data
-secrets:
-  pgpasswd:
-    file: ./pgpasswd
 volumes:
   pgdata:
 networks:
