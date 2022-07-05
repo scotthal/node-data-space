@@ -5,6 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: sleep infinity
+    volumes:
+      - ..:/workspaces/code-data-space
     ports:
       - "3000:3000"
     networks:

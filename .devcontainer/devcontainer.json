@@ -1,6 +1,7 @@
 {
   "dockerComposeFile": "docker-compose.yml",
   "service": "node",
+  "workspaceFolder": "/workspaces/node-data-space",
   "customizations": {
     "vscode": {
       "extensions": [
