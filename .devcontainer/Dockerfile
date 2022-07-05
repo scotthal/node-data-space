@@ -13,7 +13,7 @@ RUN \
   echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen; \
   locale-gen; \
   update-locale LANG=en_US.UTF-8; \
-  echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs) -pgdg main" > /etc/apt/sources.list.d/pgdg.list; \
+  echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list; \
   curl -L https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - ; \
   apt-get update; \
   apt-get -y install postgresql-client; \
